@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+    <h3>Busca</h3>
+    Opcao:
+    <select id="cbbFiltro">
+      <option value="escola">Escola</option>
+      <option value="cidade">Cidade</option>
+    </select>
+    <input type="text" id="pesquisa">
+    <br>
+    <input type="button" id="btnBuscar" onclick="buscar()" value="Buscar">
+    <input type="button" onclick="mudaPagina(1)" value="Listar escolas">
+    <br><br>
+
+    <div id="paginacao" style="visibility:hidden">
+      <label id="lista"></label>
+      <br>
+      <a href="javascript:pagAnt()" id="pagAnt">Ant</a>
+      <a href="javascript:pagProx()" id="pagProx">Prox</a>
+      <br>
+      <span id="page"></span>
+      <br>
+      <span id="total"></span>
+      <br>
+      <input type="button" id="btnEditar" value="Editar" onclick="editarOutraPagina()">
+      <input type="button" id="btnExcluir" value="Excluir" onclick="excluirEscola()">
+      <br>
+    </div>
+    
+    <script src="script.js"></script>
+
+  </body>
+</html>

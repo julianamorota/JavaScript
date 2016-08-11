@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+    <h3>Cadastro de escola</h3>
+    <label id="lblEscola">Escola: </label>
+    <input type="text" id="escola">
+    <br>
+    <input type="button" id="btnAddEscola" onclick="adicionarEscola()" value="Salvar" >
+    <input type="button" id="btnAlterar" onclick="editarEscola()" value="Alterar" >
+    <input type="button" onclick="mudaPagina(1)" value="Listar escolas">
+    <br><br>
+
+    <div id="paginacao" style="visibility:hidden">
+      <label id="lista"></label>
+      <br>
+      <a href="javascript:pagAnt()" id="pagAnt">Ant</a>
+      <a href="javascript:pagProx()" id="pagProx">Prox</a>
+      <br>
+      <span id="page"></span>
+      <br>
+      <span id="total"></span>
+      <br>
+      <input type="button" id="btnEditar" value="Editar" onclick="editarOutraPagina()">
+      <input type="button" id="btnExcluir" value="Excluir" onclick="excluirEscola()">
+      <br>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+      document.getElementById("btnAlterar").disabled = true;
+      document.getElementById("btnAddEscola").disabled = false;
+      isNew();
+    </script>
+
+
+  </body>
+</html>

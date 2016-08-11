@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+    <h3>Cadastro</h3>
+    Escola: <select id="cbbEscola"> </select>
+    <br>
+    Cidade: <input type="text" id="cidade">
+    <br>
+    <input type="button" id="btnSalvar" onclick="adicionarCidade()" value="Salvar" >
+    <input type="button" onclick="mudaPagina(1)" value="Listar escolas">
+    <br><br>
+
+    <div id="paginacao" style="visibility:hidden">
+      <label id="lista"></label>
+
+      <br>
+      <a href="javascript:pagAnt()" id="pagAnt">Ant</a>
+      <a href="javascript:pagProx()" id="pagProx">Prox</a>
+      <br>
+      <span id="page"></span>
+      <br>
+      <span id="total"></span>
+
+    </div>
+
+    <script src="script.js"></script>
+    <script src="scriptCadastro.js"></script>
+  </body>
+</html>
